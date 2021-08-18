@@ -1,0 +1,52 @@
+{
+  "name": "base-template-postcss-rollup",
+  "version": "1.0.0",
+  "description": "Starting template for html, css and modern js. Using PostCSS and Autoprefixer for css. Rollup for javascript bundling. NPM scripts for automation.Optional Nodemon (Installed globally) for when working with Node/Express.",
+  "main": "index.js",
+  "scripts": {
+    "js:build": "rollup -c",
+    "css:dev": "postcss styles/styles.css --output public/css/main.css --env development --verbose",
+    "devStart": "nodemon server.js -e pug,js,css",
+    "kickStart": "npm run watch",
+    "kickStartCSS": "npm run watchCSSOnly",
+    "prettierDev": "npx prettier --write ./public/css/main.css",
+    "watch:css": "chokidar './styles/**/*.css' -c 'npm run css:dev'",
+    "watch:js": "chokidar './src/**/*.js' -c 'npm run js:build'",
+    "css:formatDev": "chokidar './public/css/main.css' -c 'npm run prettierDev'",
+    "watch": "npm-run-all -p watch:css watch:js css:formatDev",
+    "watchCSSOnly": "npm-run-all -p watch:css css:formatDev"
+  },
+  "keywords": [
+    "Starting",
+    "template",
+    "css",
+    "javascript",
+    "PostCSS",
+    "Autoprefixer",
+    "Rollup"
+  ],
+  "author": "Chris Kew <chris.kew@icloud.com>",
+  "license": "MIT",
+  "browserslist": [
+    "defaults"
+  ],
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^20.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.0.4",
+    "autoprefixer": "^10.3.1",
+    "chokidar-cli": "^3.0.0",
+    "cssnano": "^5.0.8",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.3.6",
+    "postcss-cli": "^8.3.1",
+    "postcss-color-function": "^4.1.0",
+    "postcss-color-hex-alpha": "^7.0.0",
+    "postcss-custom-properties": "^11.0.0",
+    "postcss-import": "^14.0.2",
+    "postcss-include-media": "^1.0.0",
+    "postcss-mixins": "^8.1.0",
+    "postcss-nested": "^5.0.6",
+    "rollup-plugin-terser": "^7.0.2"
+  }
+}

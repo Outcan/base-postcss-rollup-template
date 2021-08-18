@@ -1,0 +1,7 @@
+@import "normalize/modern-normalize.min.css";
+
+@import "global/_variables.css";
+@import "global/_mixins.css";
+@import "global/_global.css";
+
+@import "components/_alerts.css";

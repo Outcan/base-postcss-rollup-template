@@ -1,0 +1,18 @@
+:root {
+  --error: #f00;
+  --success: #20bf6b;
+  --warning: #fa692c;
+
+  --bckgdCol: #181829;
+
+  --primary: #246bfd;
+  --secondary-color: #222232;
+  --tertiary-color: #2b2b3d;
+  --tertiary-light: #27273a;
+  --key-grey-blue: #65656b;
+
+  --key-deep-red: #441818;
+  --key-dark-blue: #14274d;
+
+  --grey-text: #c4c4c4;
+}
