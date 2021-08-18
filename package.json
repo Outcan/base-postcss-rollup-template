@@ -1,5 +1,5 @@
 {
-  "name": "base-template-postcss-rollup",
+  "name": "base-postcss-rollup-template",
   "version": "1.0.0",
   "description": "Starting template for html, css and modern js. Using PostCSS and Autoprefixer for css. Rollup for javascript bundling. NPM scripts for automation.Optional Nodemon (Installed globally) for when working with Node/Express.",
   "main": "index.js",
